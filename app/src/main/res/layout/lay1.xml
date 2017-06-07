@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#158684"
+    android:weightSum="1">
+
+    <Button
+        android:text="testMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_menu"
+        android:layout_weight="0.1"
+        android:background="@android:color/holo_blue_light" />
+
+    <Button
+        android:text="SequenceMode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_sequence"
+        android:layout_weight="0.1"
+        android:background="@color/common_signin_btn_light_text_focused" />
+
+    <Button
+        android:text="live_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_live_show"
+        android:layout_weight="0.1"
+        android:background="@android:color/holo_blue_dark" />
+</LinearLayout>

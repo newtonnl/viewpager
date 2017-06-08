@@ -36,7 +36,7 @@ public class veiwpage extends AppCompatActivity {
     final String Tag="viewpager";
     private ViewPager mPager;
 //    private List<View> listViews;
-    final ArrayList<View> list = new ArrayList<View>();
+
     private ImageView cursor;
     private TextView t1, t2, t3;
     private int offset = 0;
@@ -62,17 +62,20 @@ public class veiwpage extends AppCompatActivity {
 
         context = getApplicationContext();
 
+        manager = new LocalActivityManager(this,true);
+        manager.dispatchCreate(savedInstanceState);
+
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
 
 
 
-        InitViewPager();
 
-        InitTextView();
         InitImageView();
+        InitTextView();
 
+        InitViewPager();
 
 
     }
@@ -145,9 +148,10 @@ public class veiwpage extends AppCompatActivity {
     };
 
     private void InitViewPager() {
+        LayoutInflater mInflater = getLayoutInflater();
         mPager = (ViewPager) findViewById(R.id.viewpager);
  //       listViews = new ArrayList<View>();
-        LayoutInflater mInflater = getLayoutInflater();
+        final ArrayList<View> list = new ArrayList<View>();
 
         Intent intentCQAtest = new Intent(context,zuk.myapplication.test_main.class);
 

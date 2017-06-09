@@ -70,8 +70,6 @@ public class veiwpage extends AppCompatActivity {
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
 
 
-
-
         InitImageView();
         InitTextView();
 
